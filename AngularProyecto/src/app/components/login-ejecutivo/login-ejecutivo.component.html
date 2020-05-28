@@ -1,0 +1,24 @@
+<div class="contenedor"> 
+    <h1>Iniciar Sesion</h1><br>
+    <p>¡Bienvenido!</p>
+    <p>Por favor ingresar sus datos correctamente</p><br>
+
+    <p>
+        <mat-form-field>
+            <mat-label>Permiso</mat-label>
+            <input matInput #permiso disabled="true" value="Ejecutivo">
+        </mat-form-field><br> 
+        <mat-form-field>
+            <mat-label>CORREO ELECTRONICO </mat-label>
+            <input matInput #correo>
+        </mat-form-field><br>
+        <mat-form-field>
+            <mat-label>CONTRASEÑA </mat-label>
+            <input matInput type="password" #contrasena>
+        </mat-form-field><br> 
+    </p>
+    <button class="boton_personalizado" (click)="loginAdmin(correo.value, contrasena.value, permiso.value)">Iniciar Sesion</button>
+    <button class="boton_personalizado" [routerLink]="['/bienvenido']">Volver atras</button>
+    
+    
+    <ul><a class="recuperar" [routerLink]="['/recuperarc']" style="text-decoration: none;">¿Olvido su contraseña?</a></ul>

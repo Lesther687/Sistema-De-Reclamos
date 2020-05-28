@@ -1,0 +1,34 @@
+<div class="contenedor" >
+    <!--Contenido de Reporte--><br><br>
+    <h2>RECLAMO FILTRADO NUMERO {{reclamo.num_reclamo}}</h2><br><br>
+    
+    <div>
+        <mat-form-field style="width: 40%;height: 10%;margin-right: 20px;" >
+            <mat-label>Numero de reclamo</mat-label>
+            <input matInput #num_reclamo value="{{reclamo.num_reclamo}}" disabled="true">
+        </mat-form-field>
+        <mat-form-field style="width: 40%; height: 10%; ">
+            <mat-label>RUT del Usuario</mat-label>
+            <input matInput #rut_usuario value="{{reclamo.rut_usuario}}" disabled="true">
+        </mat-form-field>
+        <mat-form-field style="width: 40%;height: 7%;margin-right: 20px;">
+            <mat-label>Tipo problema</mat-label>
+            <input matInput #tipo_problema value="{{reclamo.tipo_problema}}" disabled="true">
+        </mat-form-field>
+        <mat-form-field style="width: 40%;height: 7%;">
+            <mat-label>Texto del Reclamo</mat-label>
+            <input matInput #texto_reclamo value="{{reclamo.texto_reclamo}}"disabled="true">
+        </mat-form-field>
+        <mat-form-field style="width: 40%;height: 12%;margin-right: 20px;">
+            <mat-label>Fecha del reclamo</mat-label>
+            <input matInput #fecha value="{{reclamo.fecha}}" disabled="true">
+        </mat-form-field>
+        <mat-form-field style="width: 40%;height: 13%;">
+            <mat-label>Estado del Reclamo</mat-label>
+            <input matInput #fechaTope value="{{reclamo.estado}}" disabled="true">
+        </mat-form-field>
+        <button mat-raised-button color="primary" (click)="volver()" style="margin: 0em;">Volver Atras</button>
+    
+  
+        </div>
+      </div>

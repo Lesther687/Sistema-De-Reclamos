@@ -1,0 +1,30 @@
+<div class="contenedor" >
+
+    <!--Contenido de Reporte-->
+    <h2>Reclamo N° {{reclamos.num_reclamo}} </h2>
+    <div class="contenedor1">
+    <h3>Estado reclamo: {{reclamos.estado}}</h3>
+        
+            <h3>Detalles Reclamo: {{reclamos.tipo_problema}} </h3>
+            <hr>
+            <mat-form-field style="width: 100%;" >
+                <mat-label>NUMERO DE RECLAMO</mat-label>
+                <input matInput #num_reclamo  value = "{{reclamos.num_reclamo}}" disabled="true">
+            </mat-form-field>
+            <mat-form-field style="width: 100%;">
+                <mat-label>RUT DEL ADMIN</mat-label>
+                <input matInput disabled="true" value="10"#rut_admin  >
+            </mat-form-field>
+            <mat-form-field style="width: 100%;">
+                <mat-label>RESPUESTA DEL ADMIN</mat-label>
+                <input matInput #texto_respuesta >
+            </mat-form-field>
+            <mat-form-field style="width: 100%;">
+                <mat-label>Fecha de Respuesta YYYY/MM/DD</mat-label>
+                <input matInput #fecha_respuesta >
+            </mat-form-field>
+
+        <button mat-raised-button color="primary" (click)="volver()" style="margin: 1em;">Volver Atras</button>
+        <button mat-raised-button color="warn" (click)="responder(num_reclamo.value, rut_admin.value, texto_respuesta.value, fecha_respuesta.value)">Responder</button>
+        
+        </div>

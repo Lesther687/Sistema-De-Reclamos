@@ -1,0 +1,15 @@
+
+table {
+    width: 80%;
+    position: relative;
+    height: 400px;
+    overflow: auto;
+    display: block;
+    border-radius: 10px;
+    text-align: center;
+  }
+table td{
+margin-right: 10px;
+margin-left: 10px;
+  }
+  
